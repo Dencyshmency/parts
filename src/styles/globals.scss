@@ -1,0 +1,70 @@
+@import '/src/components/loyaut/header.scss';
+@import '/src/components/loyaut/footer.scss';
+@import '/src/components/sections/front/front.scss';
+@import '/src/components/sections/products/products.scss';
+@import '/src/components/sections/formats/formats.scss';
+@import '/src/components/sections/commission/commission.scss';
+@import '/src/components/sections/benefits/benefits.scss';
+@import '/src/components/sections/faq/faq.scss';
+@import '/src/components/sections/contacts/contacts.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d0d0d;
+  --black-podlozhka: #131313;
+  --fioletovyy: #723ed3;
+  --white: #fff;
+  --text-grey: #8b8b8b;
+
+  --grad: linear-gradient(180deg, rgba(43, 43, 43, 1) 0%, rgba(43, 43, 43, 0.7679446778711485) 59%, rgba(19, 19, 19, 0) 100%);
+  --grad2: linear-gradient(0deg, rgba(43, 43, 43, 1) 0%, rgba(43, 43, 43, 0.7679446778711485) 59%, rgba(19, 19, 19, 0) 100%);
+  --grad3: linear-gradient(270deg, rgba(43, 43, 43, 1) 0%, rgba(43, 43, 43, 0.7679446778711485) 59%, rgba(19, 19, 19, 0) 100%);
+  --grad4: linear-gradient(90deg, rgba(43, 43, 43, 1) 0%, rgba(43, 43, 43, 0.7679446778711485) 59%, rgba(19, 19, 19, 0) 100%);
+  --grad5: linear-gradient(90deg, rgba(43, 43, 43, 0) 0%, rgba(43, 43, 43, 0.77) 32%, rgba(43, 43, 43, 1) 50%, rgba(43, 43, 43, 0.7679446778711485) 68%, rgba(19, 19, 19, 0) 100%);
+
+
+
+  --font-family: "Sora", sans-serif;
+  --second-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+section:not(:first-child) {
+  margin-top: 120px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+      text-align: center;
+      color: var(--white);
+}
+
+
+@media all and (max-width: 1200px) {
+  .container {
+    max-width: 991px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    max-width: 375px;
+  }
+}

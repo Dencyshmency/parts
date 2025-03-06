@@ -1,0 +1,21 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "formik": "^2.4.6",
+    "next": "15.1.7",
+    "react": "^19.0.0",
+    "react-collapse": "^5.1.1",
+    "react-dom": "^19.0.0",
+    "sass": "^1.85.1",
+    "swiper": "^11.2.5",
+    "yup": "^1.6.1"
+  }
+}

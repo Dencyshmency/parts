@@ -1,0 +1,450 @@
+.products-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+
+    .products-items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px 30px;
+        width: 100%;
+
+        .products-item {
+            background: linear-gradient(var(--black-podlozhka), var(--black-podlozhka)) padding-box, var(--grad) border-box;
+            overflow: hidden;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            height: 246px;
+            display: flex;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+
+            &:hover > picture img {
+            opacity: 1;
+                visibility: visible;
+                transition: 0.3s linear;
+            }
+
+            &:hover .products-item-text a:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background:var(--fioletovyy);
+
+            }
+
+            > picture img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s linear;
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            h5 {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 140%;
+                color: var(--white);
+            }
+
+            .products-item-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 29px;
+                position: relative;
+                z-index: 1;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap :10px;
+
+                    p {
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: var(--text-grey);
+                    } 
+                }
+
+                a {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 140%;
+                    text-align: center;
+                    color: var(--fioletovyy);
+                    text-decoration: none;
+                    position: relative;
+
+                    &:after {
+                        content: ">";
+                        position: absolute;
+                        top: 1px;
+                        right: -18px; 
+                    }
+                }
+            }
+        }
+
+        .products-item--casino {
+            max-width: 480px;
+        }
+
+        .products-item--betting {
+            max-width: 378px;
+        }
+
+        .products-item--porn {
+            max-width: 270px;
+        }
+
+        .products-item--crypto {
+            max-width: 378px;
+        }
+
+        .products-item--dating {
+            max-width: 270px;
+        }
+
+        .products-item--webcam {
+            max-width: 480px;
+        }
+
+        .products-item--others {
+            max-width: 678px;
+        }
+
+        .products-item--registration {
+            max-width: 480px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--fioletovyy);
+            position: relative;
+
+            picture {
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+            }
+
+            span {
+                margin: 10px 0 30px 0;
+                font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: var(--white);
+            }
+
+            a {
+                width: 100%;
+                border: 1.08px solid #e1d0ff;
+                border-radius: 10px;
+                padding: 18px 0;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 0.8;
+                text-align: center;
+                color: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    .products-wrapper {
+            gap: 50px;
+    
+            .products-items {
+                gap: 19px 30px;
+                width: 100%;
+                flex-wrap: wrap;
+    
+                .products-item {
+                    padding: 20px;
+                    width: 100%;
+                    min-height: 208px;
+                    flex: 1 0 230px;
+    
+                    > picture img {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.3s linear;
+                        pointer-events: none;
+                    }
+    
+                    h5 {
+                        font-size: 18px;
+                    }
+    
+                    .products-item-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 19px;
+
+                        a {
+                            margin-top: auto;
+                        }
+                    }
+                }
+    
+                .products-item--casino {
+                    max-width: 480px;
+                    width: 100%;
+                }
+    
+                .products-item--betting {
+                    max-width: 480px;
+                    width: 100%;
+                }
+    
+                .products-item--porn {
+                    max-width: 270px;
+                    width: 100%;
+                }
+    
+                .products-item--crypto {
+                    max-width: 378px;
+                    width: 100%;
+                }
+    
+                .products-item--dating {
+                    max-width: 270px;
+                    width: 100%;
+                }
+    
+                .products-item--webcam {
+                    max-width: 480px;
+                    width: 100%;
+                }
+    
+                .products-item--others {
+                    max-width: 480px;
+                    width: 100%;
+                }
+    
+                .products-item--registration {
+                    max-width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--fioletovyy);
+                    position: relative;
+    
+                    picture {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        pointer-events: none;
+                    }
+    
+                    span {
+                        margin: 10px 0 30px 0;
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        text-align: center;
+                        color: var(--white);
+                    }
+    
+                    a {
+                        max-width: 316px;
+                        width: 100%;
+                        border: 1.08px solid #e1d0ff;
+                        border-radius: 10px;
+                        padding: 18px 0;
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 0.8;
+                        text-align: center;
+                        color: var(--white);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+}
+
+@media all and (max-width: 768px) {
+    .products-wrapper {
+        gap: 50px;
+
+        .products-items {
+            gap: 8px;
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+
+            .products-item {
+                padding: 16px;
+                max-width: 332px!important;
+                width: 100%;
+                min-height: unset;
+                height: 174px;
+                flex: unset;
+
+                > picture img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s linear;
+                    pointer-events: none;
+                    
+                }
+
+             
+             
+
+                .products-item-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 14px;
+               
+
+                    div {
+                        gap: 6px;
+                    }
+
+                    a {
+                        margin-top: unset;
+                    }
+
+                    h5 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                    font-size: 16px;
+                    }
+
+                    img {
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+            }
+
+            .products-item--casino {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--betting {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--porn {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--crypto {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--dating {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--webcam {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--others {
+                max-width: unset;
+                width: 100%;
+            }
+
+            .products-item--registration {
+                max-width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: var(--fioletovyy);
+                position: relative;
+                height: 174px;
+
+                picture {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    pointer-events: none;
+                }
+
+                h5 {
+                    font-size: 20px;
+                }
+
+                span {
+                    margin: 10px 0 16px 0;
+
+                    font-size: 16px;
+
+                }
+
+                a {
+                    max-width: 316px;
+                    width: 100%;
+                    border: 1.08px solid #e1d0ff;
+                    border-radius: 10px;
+                    padding: 18px 0;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 0.8;
+                    text-align: center;
+                    color: var(--white);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
