@@ -49,12 +49,14 @@
          &:hover {
              background: var(--fioletovyy);
              transition: 0.3s linear;
+            
          }
 
          &:hover a {
              opacity: 1;
              visibility: visible;
              transition: 0.3s linear;
+            color: var(--bg)
          }
 
          &:before {

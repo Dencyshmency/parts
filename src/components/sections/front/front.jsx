@@ -6,20 +6,14 @@ export default function Front() {
     const [isHorizontal, setIsHorizontal] = useState(false);
     const [isColor, setColor] = useState('blue');
     const [isIndex, setindex] = useState();
-    
     const color = `ellips ${isColor}`;
 
-
     const handleSlideChange = (swiper) => {  
-     
         setindex(swiper.activeIndex);  
-
-
     }; 
 
        useEffect(() => {
-               
-                  if (isIndex === 0) {  
+            if (isIndex === 0) {  
               setColor('blue');  
             } else if (isIndex === 1) {  
               setColor('red');  
@@ -31,7 +25,6 @@ export default function Front() {
 
     const changeColorItem = (item) => {
         setColor(item);
-        setBorder(`${item}-item`);
     }
 
     useEffect(() => {  
