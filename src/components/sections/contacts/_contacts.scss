@@ -3,7 +3,7 @@
     width: 100%;
     margin: -20px auto 0 auto;
     height: 780px;
-    background-image: url('/images/form-bg.svg');
+    background-image: url('/images/form-bg.png');
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -88,10 +88,51 @@
 
             .contact-login-btn {
                 background: #000;
+
+                &:hover {
+                        transition: 0.3s ease;
+                        background: #e1d0ff;
+                        color: var(--bg);
+                
+                    }
+                
+                    &:focus {
+                        transition: 0.3s ease;
+                        background: #d4bffb;
+                        border: 1.08px solid #d4bffb;
+                    }
+                
+                    &:active {
+                        transition: 0.3s ease;
+                        background: initial;
+                        border: 1.08px solid #e1d0ff;
+                        color: #6c6c6c;
+                        ;
+                    }
             }
 
             .contact-registration-btn {
                 border: 1px solid #fff;
+
+                     &:hover {
+                        transition: 0.3s ease;
+                        background: #e1d0ff;
+                
+                    }
+                
+                    &:focus {
+                        transition: 0.3s ease;
+                        background: #d4bffb;
+                        border: 1.08px solid #d4bffb;
+                    }
+                
+                    &:active {
+                        transition: 0.3s ease;
+                        background: initial;
+                        border: 1.08px solid #e1d0ff;
+                        color: #6c6c6c;
+                        ;
+                    }
             }
         }
     }
@@ -143,11 +184,29 @@
                 color: #8d8d8d;
                 border: 1px solid transparent;
                 transition: 0.3s ease;
+
+                &:hover {
+                        background: #272729;
+                        transition: 0.3s ease;
+                }
+            
+                &:focus {
+                    background: #272729;
+                    border: 1px solid var(--fioletovyy);
+                    transition: 0.3s ease;
+                }
+
+                // &:valid {
+                //     background: #272729;
+                //     border: 1px solid transparent;
+                //     transition: 0.3s ease;
+                // }
             }
 
             .error-input {
-                border: 1px solid #c18383;
+                border: 1px solid #c54444;
                 transition: 0.3s ease;
+                background: #38383b;
             }
 
             label {
@@ -176,11 +235,26 @@
         color: #8d8d8d;
         border: 1px solid transparent;
         transition: 0.3s ease;
+        resize: none;
+
+        &:hover {
+                background: #272729;
+                transition: 0.3s ease;
+            }
+        
+        &:focus {
+            background: #272729;
+            border: 1px solid var(--fioletovyy);
+            transition: 0.3s ease;
+        }
+
+      
     }
 
     .error-input {
-        border: 1px solid #c18383;
+        border: 1px solid #c54444;
         transition: 0.3s ease;
+        background: #38383b;
     }
 
     button {
@@ -462,10 +536,12 @@
                     color: #8d8d8d;
                     border: 1px solid transparent;
                     transition: 0.3s ease;
+
+
                 }
 
                 .error-input {
-                    border: 1px solid #c18383;
+                    border: 1px solid #c54444;
                     transition: 0.3s ease;
                 }
 

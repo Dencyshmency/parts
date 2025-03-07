@@ -70,6 +70,10 @@
              opacity: 0.1;
          }
 
+         &:hover:before {
+            color: var(--white);
+         }
+
          p {
              font-family: var(--font-family);
              font-weight: 400;
@@ -107,6 +111,25 @@
              opacity: 0;
              visibility: hidden;
              transition: 0.3 ease;
+
+            &:hover {
+                transition: 0.3s ease;
+                background: #e1d0ff;
+        
+            }
+        
+            &:focus {
+                transition: 0.3s ease;
+                background: #d4bffb;
+                border: 1.08px solid #d4bffb;
+            }
+        
+            &:active {
+                transition: 0.3s ease;
+                background: initial;
+                border: 1.08px solid #e1d0ff;
+                color: #6c6c6c;
+            }
          }
      }
 

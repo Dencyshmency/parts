@@ -28,6 +28,12 @@ header {
     line-height: 120%;
     color: var(--white);
     text-decoration: none;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: #b288ff;
+        transition: 0.3s ease;
+    }
 }
 
 .header-links {
@@ -51,10 +57,48 @@ header {
 .login-btn {
     background: var(--fioletovyy);
     border: 1.08px solid var(--fioletovyy);
+    transition: 0.3s ease;
+
+    &:hover {
+        transition: 0.3s ease;
+        background: #8c5ce6;
+        border: 1.08px solid #8c5ce6;
+    }
+
+    &:focus {
+        transition: 0.3s ease;
+        background: #7c4ada;
+        border: 1.08px solid #7c4ada;
+    }
+
+    &:active {
+        transition: 0.3s ease;
+        background: #534e5e;
+        border: 1.08px solid #e1d0ff;
+    }
 }
 
 .registration-btn {
     border: 1.08px solid #e1d0ff;
+
+    &:hover {
+        transition: 0.3s ease;
+        background: #e1d0ff;
+        
+    }
+
+    &:focus {
+        transition: 0.3s ease;
+        background:  #d4bffb;
+        border: 1.08px solid  #d4bffb;
+    }
+
+    &:active {
+        transition: 0.3s ease;
+        background: initial;
+        border: 1.08px solid #e1d0ff;
+        color: #6c6c6c;;
+    }
 }
 
 .burger-btn {

@@ -2,11 +2,10 @@ import React, {useState} from 'react';
 
 export default function Header() {
 
-  const [isClick, setClick] = useState(false)
-
+  const [isClick, setClick] = useState(false);
 
   const burgerIsOpen = isClick ? 'burger-panel open' : 'burger-panel';
-    const burgerIcon = isClick ? '../images/burger-click.svg' : '../images/burger-btn.svg';
+  const burgerIcon = isClick ? '../images/burger-click.svg' : '../images/burger-btn.svg';
 
   return (
     <>
@@ -15,7 +14,6 @@ export default function Header() {
         <div className="header-wrapper">
             <a href="">
               <picture>
-                  <source media="(max-width: 991px)" srcSet="../images/logo-mob.svg" />
                   <img src="../images/logo.svg" alt="logo" />
               </picture>
             </a>

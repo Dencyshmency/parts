@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';  
 
 const Contacts = () => {
-
 const validationSchema = Yup.object().shape({  
   name: Yup.string()  
     .min(2, 'Имя должно содержать минимум 2 символа')  

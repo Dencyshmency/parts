@@ -6,6 +6,22 @@
     max-width: 477px;
     width: 100%;
 }
+
+.border {
+    background: conic-gradient(from 90deg, rgba(43, 44, 168, 1) 0deg, rgba(55, 57, 228, 1) 28.8deg, rgba(13, 13, 13, 1) 50.4deg, rgba(13, 13, 13, 1) 284.4deg, rgba(43, 44, 168, 1) 360deg);
+    height:100%;
+    width:100%;
+    opacity:0.33
+}
+
+.red-item {
+    background:conic-gradient(from 90deg,rgba(136, 32, 32, 1) 60deg,rgba(183, 40, 40, 1) 28.8deg,rgba(13, 13, 13, 1) 50.4deg,rgba(13, 13, 13, 1) 284.4deg,rgba(136, 32, 32, 1) 360deg);
+}
+
+.gray-item {
+    background: conic-gradient(from 90deg, rgba(82, 83, 178, 1) 0deg, rgba(109, 110, 241, 1) 28.8deg, rgba(13, 13, 13, 1) 50.4deg, rgba(13, 13, 13, 1) 284.4deg, rgba(82, 83, 178, 1) 360deg);
+}
+
 #front {
     background-image: url('/images/main.svg');
     max-width: 1440px;
@@ -25,28 +41,32 @@
         left: 0;
         z-index: 0;
 
+        .ellipse-item {
+       
+           
+        }
+
         .glow {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
+            width:1300px;
+            height: 1300px;
             border-radius: 100%;
-            background: linear-gradient(143deg, #7779fa 0%, rgba(55, 57, 228, 0) 100%);
-            filter: blur(280.4151611328125px);
+            background: linear-gradient(107deg, #7779fa 0%, rgba(55, 57, 228, 0) 80%);
             z-index: -1;
             transition: 0.3s ease;
             
         }
 
         .red {
-            background: linear-gradient(143deg, #b72828 0%, rgba(183, 40, 40, 0) 100%);
+            background: linear-gradient(107deg, #b72828 0%, rgba(183, 40, 40, 0) 80%);
             transition: 0.3s ease;
         }
 
         .gray {
-            background: linear-gradient(143deg, #bcbdff 0%, rgba(55, 57, 228, 0) 100%);
+            background: linear-gradient(107deg, #bcbdff 0%, rgba(55, 57, 228, 0) 80%);
             transition: 0.3s ease;
         }
     }
@@ -294,9 +314,6 @@
     overflow: visible;
 }
 
-.swiper-wrapper {
-    // gap: 10px;
-}
 
 .swiper-slide {
 
