@@ -5,7 +5,7 @@ export default function Front() {
     const [isHorizontal, setIsHorizontal] = useState(false);
     const [isColor, setColor] = useState('blue');
     const [isBorder, setBorder] = useState('blue');
-    const color = `glow ${isColor}`;
+    const color = `ellips ${isColor}`;
     const border = `border ${isBorder}`
 
     const changeColorItem = (item) => {
@@ -31,7 +31,8 @@ export default function Front() {
     <>
      <section id="front">
         <div className="front-img">
-            <svg width="745" height="800" viewBox="0 0 745 800" fill="none" xmlns="http://www.w3.org/2000/svg" className="ellipse-item">
+            <div className={color}></div>
+            {/* <svg width="745" height="800" viewBox="0 0 745 800" fill="none" xmlns="http://www.w3.org/2000/svg" className="ellipse-item">
                 <mask id="path-1-inside-1_28_2276" fill="white">
                     <path d="M-82.0002 -294C374.739 -294 745 16.9383 745 400.5C745 784.062 374.739 1095 -82.0001 1095L-82.0002 -294Z" />
                 </mask>
@@ -49,8 +50,8 @@ export default function Front() {
                     <path d="M-82.0002 -294L-84.0002 -294L-84.0002 -296L-82.0002 -296L-82.0002 -294ZM-82.0001 1095L-82.0001 1097L-84.0001 1097L-84.0001 1095L-82.0001 1095ZM743 400.5C743 18.3557 373.976 -292 -82.0002 -292L-82.0002 -296C375.503 -296 747 15.5208 747 400.5L743 400.5ZM-82.0001 1093C373.976 1093 743 782.644 743 400.5L747 400.5C747 785.479 375.503 1097 -82.0001 1097L-82.0001 1093ZM-84.0001 1095L-84.0002 -294L-80.0002 -294L-80.0001 1095L-84.0001 1095Z" mask="url(#path-1-inside-1_28_2276)" />
                     </clipPath>
                 </defs>
-            </svg>
-            <div className={color}></div>
+            </svg> */}
+            {/* <div className={color}></div> */}
         </div>
         <div className="container">
             <div className="front-section-wrapper">
