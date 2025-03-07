@@ -55,6 +55,7 @@
         // transform: rotate(45deg);
         -webkit-box-shadow: 0px 0px 180px 50px #7779fa;
             box-shadow: 0px 0px 180px 50px #7779fa;
+            transition: 0.3s ease;
     }
 
         .red {
@@ -387,6 +388,36 @@
         background-size: cover;
         padding-top: 90px;
 
+        .ellips {
+                position: absolute;
+                top: -40%;
+                left: -50%;
+                width: 768px;
+                height: 768px;
+                border-radius: 50%;
+                background: var(--bg);
+                z-index: 4;
+                border: none;
+                // border-top: 2px solid rgba(255, 0, 0, 0.708);
+                // border-bottom: 2px solid rgba(255, 0, 0, 0.708);
+                // transform-origin: center;
+                // transform: rotate(45deg);
+                -webkit-box-shadow:0px -16px 75px -3px #7779fa;
+                box-shadow:0px -16px 75px -3px #7779fa;
+                transition: 0.3s ease;
+            }
+        
+            .red {
+                transition: 0.3s ease;
+                -webkit-box-shadow:0px -16px 75px -3px #b72828;
+                box-shadow:0px -16px 75px -3px #b72828;
+            }
+
+            .gray {
+                -webkit-box-shadow: 0px -16px 75px -3px #bcbdff;
+                box-shadow: 0px -16px 75px -3px #bcbdff;
+                transition: 0.3s ease;
+            }
 
 
 
@@ -396,41 +427,6 @@
         left: 0;
         z-index: 0;
         width: 100%;
-
-
-        .ellipse {
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            // width: 100%;
-            // object-fit: cover;
-        }
-
-        .glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            border-radius: 100%;
-            background: linear-gradient(143deg, #7779fa 0%, rgba(55, 57, 228, 0) 100%);
-            filter: blur(280.4151611328125px);
-            z-index: -1;
-            transition: 0.3s ease;
-
-        }
-
-        .red {
-            background: linear-gradient(143deg, #b72828 0%, rgba(183, 40, 40, 0) 100%);
-            transition: 0.3s ease;
-        }
-
-        .gray {
-            background: linear-gradient(143deg, #bcbdff 0%, rgba(55, 57, 228, 0) 100%);
-            transition: 0.3s ease;
-        }
     }
 
 

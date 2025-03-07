@@ -252,10 +252,10 @@
     }
 
     .error-input {
-        border: 1px solid #c54444;
-        transition: 0.3s ease;
-        background: #38383b;
-    }
+                border: 1px solid #c54444;
+                transition: 0.3s ease;
+                background: #38383b;
+            }
 
     button {
         width: 100%;
@@ -280,6 +280,7 @@
 
 @media all and (max-width: 1200px) {
     #form-section {
+        position: relative;
         }
     
         .contacts-wrapper {
