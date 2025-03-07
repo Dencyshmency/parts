@@ -39,20 +39,34 @@
         position: absolute;
         top:0;
         left: 0;
-        z-index: 1;
-        filter: drop-shadow(-60px -60px 130px #7779fa);
-        transition: 0.3s ease;
-    }
+        z-index: 0;
 
-          .red {
-              filter: drop-shadow(-60px -60px 130px #b72828);
-              transition: 0.3s ease;
-          }
+
+        .glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:700px;
+            height: 700px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 180px 50px #7779fa;
+            z-index: -1;
+            transition: 0.3s ease;
+            
+        }
+
+           .red {
     
-          .gray {
-              filter: drop-shadow(-60px -60px 130px #bcbdff);
-              transition: 0.3s ease;
-          }
+               transition: 0.3s ease;
+                box-shadow: 0px 0px 180px 50px #b72828;
+           }
+    
+           .gray {
+            box-shadow: 0px 0px 180px 50px #bcbdff;
+               transition: 0.3s ease;
+           }
+    }
 
     .container  {
         height: 100%;

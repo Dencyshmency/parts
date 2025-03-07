@@ -5,7 +5,7 @@ export default function Front() {
     const [isHorizontal, setIsHorizontal] = useState(false);
     const [isColor, setColor] = useState('blue');
     const [isBorder, setBorder] = useState('blue');
-    const color = `front-img ${isColor}`;
+    const color = `glow ${isColor}`;
     const border = `border ${isBorder}`
 
     const changeColorItem = (item) => {
@@ -30,7 +30,7 @@ export default function Front() {
   return (
     <>
      <section id="front">
-        <div className={color}>
+        <div className="front-img">
             <svg width="745" height="800" viewBox="0 0 745 800" fill="none" xmlns="http://www.w3.org/2000/svg" className="ellipse-item">
                 <mask id="path-1-inside-1_28_2276" fill="white">
                     <path d="M-82.0002 -294C374.739 -294 745 16.9383 745 400.5C745 784.062 374.739 1095 -82.0001 1095L-82.0002 -294Z" />
@@ -50,7 +50,7 @@ export default function Front() {
                     </clipPath>
                 </defs>
             </svg>
-            {/* <div className=></div> */}
+            <div className={color}></div>
         </div>
         <div className="container">
             <div className="front-section-wrapper">
