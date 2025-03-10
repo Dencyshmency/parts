@@ -1,13 +1,7 @@
 import Head from "next/head";
 import Header from "@/components/loyaut/header.jsx";
 import Footer from "@/components/loyaut/footer.jsx";
-import Front from "@/components/sections/front/front.jsx";
-import Products from "@/components/sections/products/products.jsx";
-import Formats from "@/components/sections/formats/formats.jsx";
-import Commission from "@/components/sections/commission/commission.jsx";
-import Benefits from "@/components/sections/benefits/benefits.jsx";
-import Faq from "@/components/sections/faq/faq.jsx";
-import Contacts from "@/components/sections/contacts/contacts.jsx";
+import Traffic from "@/components/states/traffic/traffic.jsx";
 
 export default function Home() {
   return (
@@ -27,13 +21,7 @@ export default function Home() {
       
       <Header />
       <main>
-        <Front />
-        <Products />
-        {/* <Formats /> */}
-        <Commission />
-        <Benefits />
-        <Faq />
-        <Contacts />
+        <Traffic />
       </main>
       <Footer />
     </>

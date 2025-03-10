@@ -25,6 +25,10 @@ export default function Footer() {
               <a href="" className="header-links-link registration-btn">Registration</a>
             </div>
           </div>
+          <div className="under-footer-items">
+            <a href="/privat-policy/" target="_blank">Privacy Police</a>
+            <a href="/traffics-guidelines/" target="_blank">Traffic Guidelines for XADS Ad Network</a>
+          </div>
         </div>
      </footer>
     </>

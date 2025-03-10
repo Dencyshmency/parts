@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';  
 import * as Yup from 'yup';  
 
@@ -19,6 +19,11 @@ const validationSchema = Yup.object().shape({
     .required('Обязательное поле'),  
 });  
 
+const [isSend, setSend] = useState('submit-wrapper');
+
+const closeModal = () => {
+  setSend('submit-wrapper')
+}
 
 
 
@@ -54,6 +59,7 @@ const sendTelegramm = (item) => {
   })  
   .then(data => {  
     console.log('Success:', data);  
+
     // Дополнительная обработка успешной отправки  
   })  
   .catch(error => {  
@@ -95,6 +101,7 @@ const sendTelegramm = (item) => {
                                     sendTelegramm(values);
                                     resetForm();
                                     setSubmitting(false)
+                                    setSend('submit-wrapper open-wrapper')
                                 }}  
                             >  
                             {({ isSubmitting, errors, touched }) => (  
@@ -150,6 +157,19 @@ const sendTelegramm = (item) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={isSend}>
+              <div className="submit-content">
+                <button className="close-submit-btn" onClick={closeModal}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.6665 13.3333L13.3332 2.66666" stroke="#898989" stroke-width="1.33333" stroke-linecap="round" />
+                    <path d="M13.3335 13.3333L2.66683 2.66666" stroke="#898989" stroke-width="1.33333" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p>Your application has been submitted!</p>
+                <span>We will contact you within 10 minutes</span>
+                <button className="ok-btn" onClick={closeModal}>Okay</button>
+              </div>
             </div>
         </section>
         </>
