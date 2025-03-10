@@ -29,7 +29,7 @@ const Formats = () => {
                                     <source media="(max-width: 1024px)" srcSet={item.imgs.tablet2} />  
                                     )}
                                     <source media="(max-width: 1200px)" srcSet={item.imgs.tablet} />
-                                    <img src={item.imgs.desktop} alt="" />
+                                    <img src={item.imgs.desktop} alt={item.title} />
                                 </picture>
                             </div>
                         )})}

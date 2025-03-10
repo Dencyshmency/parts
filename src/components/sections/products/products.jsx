@@ -42,7 +42,7 @@ export default function Products () {
                             <div className="products-item-text">
                                 <img src="../images/products/form3.svg" alt="cards-icon" />
                                 <div>
-                                <h5>Porn</h5>
+                                <h5>Adult</h5>
                                 <p>World best porn sites</p>
                                 </div>
                                 <a href="">Join now</a>

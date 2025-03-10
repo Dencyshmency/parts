@@ -11,13 +11,61 @@ const validationSchema = Yup.object().shape({
   email: Yup.string()  
     .email('Неверный формат email')  
     .required('Обязательное поле'),  
-  text1: Yup.string()  
+  website: Yup.string()  
     .required('Обязательное поле'),  
-  text2: Yup.string()  
+  subjects: Yup.string()  
     .required('Обязательное поле'),  
-  text3: Yup.string()  
+  message: Yup.string()  
     .required('Обязательное поле'),  
 });  
+
+
+
+
+const sendTelegramm = (item) => {
+    const TOKEN = "7729549293:AAGi8xvie0dEr-JRKOLT33ZeI1Kss1aqB4M";  
+    const CHAT_ID = "-4695249177";  
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;  
+
+
+    let data = `<b>Name: </b>${item.name}\n`;
+    data += `<b>Email: </b>${item.email}\n`;
+    data += `<b>Website: </b>${item.website}\n`;
+    data += `<b>Subjects: </b>${item.subjects}\n`;
+    data += `<b>Message: </b>${item.message}\n`;
+
+
+  fetch(URI_API, {  
+    method: 'POST',  
+    headers: {  
+      'Content-Type': 'application/json'  
+    },  
+    body: JSON.stringify({  
+      chat_id: CHAT_ID,  
+      parse_mode: "html",  
+      text: data,  
+    })  
+  })  
+  .then(response => {  
+    if (!response.ok) {  
+      throw new Error(`HTTP error! status: ${response.status}`);  
+    }  
+    return response.json();  
+  })  
+  .then(data => {  
+    console.log('Success:', data);  
+    // Дополнительная обработка успешной отправки  
+  })  
+  .catch(error => {  
+    console.error('Error:', error);  
+    // Обработка ошибок  
+  });  
+}
+
+
+
+
+
 
     return (
         <>
@@ -34,20 +82,19 @@ const validationSchema = Yup.object().shape({
                                 <li>Lorem ipsum</li>
                             </ul>
                             <div className="contacts-content-nav-links">
-                                <a href="" className="contact-login-btn">Log in</a>
-                                <a href="" className="contact-registration-btn">Registration</a>
+                                <a href="" target="_blank" className="contact-login-btn">Log in</a>
+                                <a href="" target="_blank" className="contact-registration-btn">Registration</a>
                             </div>
                         </div>
                         <div className="contacts-content-form">
                             <p>Fill out the application</p>
                             <Formik  
-                                initialValues={{ name: '', email: '', text1: '', text2: '', text3: '' }}  
+                                initialValues={{ name: '', email: '', website: '', subjects: '', message: '' }}  
                                 validationSchema={validationSchema}  
-                                onSubmit={(values, { setSubmitting }) => {  
-                                setTimeout(() => {  
-                                    alert(JSON.stringify(values, null, 2));  
-                                    setSubmitting(false);  
-                                }, 400);  
+                                onSubmit={(values, { setSubmitting, resetForm  }) => {  
+                                    sendTelegramm(values);
+                                    resetForm();
+                                    setSubmitting(false)
                                 }}  
                             >  
                             {({ isSubmitting, errors, touched }) => (  
@@ -60,7 +107,7 @@ const validationSchema = Yup.object().shape({
                                             placeholder="Name"
                                             className={touched.name && errors.name ? 'error-input' : ''}  
                                             />  
-                                        </div>  
+                                        </div>
                                         <div>  
                                             <Field 
                                             type="email" 
@@ -72,26 +119,26 @@ const validationSchema = Yup.object().shape({
                                         <div>  
                                             <Field 
                                             type="text" 
-                                            name="text1" 
+                                            name="website" 
                                             placeholder="Website"
-                                            className={touched.text1 && errors.text1 ? 'error-input' : ''}
+                                            className={touched.website && errors.website ? 'error-input' : ''}
                                             />  
                                         </div>  
                                         <div>  
                                             <Field 
                                             type="text" 
-                                            name="text2" 
+                                            name="subjects" 
                                             placeholder="Subjects"
-                                            className={touched.text2 && errors.text2 ? 'error-input' : ''}
+                                            className={touched.subjects && errors.subjects ? 'error-input' : ''}
                                             />  
                                         </div>  
                                     </div> 
                                     <div>  
                                         <Field 
                                         component="textarea" 
-                                        name="text3" 
+                                        name="message" 
                                         placeholder="Message content"
-                                        className={touched.text3 && errors.text3 ? 'error-input' : ''}
+                                        className={touched.message && errors.message ? 'error-input' : ''}
                                         />  
                                     </div>  
                                     <button type="submit" disabled={isSubmitting}>  

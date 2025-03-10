@@ -37,7 +37,7 @@ const Faq = () => {
                                             </svg>  
                                         </div>  
                                         <Collapse isOpened={openIndex1 === index}>  
-                                            <div className='faq-answer'>{item.answer}</div>  
+                                            <div className='faq-answer' dangerouslySetInnerHTML={{ __html: item.answer }}></div>  
                                         </Collapse>  
                                     </div>  
                                 )  
@@ -55,7 +55,7 @@ const Faq = () => {
                                             </svg>  
                                         </div>  
                                         <Collapse isOpened={openIndex2 === index}>  
-                                            <div className='faq-answer'>{item.answer}</div>  
+                                            <div className='faq-answer' dangerouslySetInnerHTML={{ __html: item.answer }}></div>  
                                         </Collapse>  
                                     </div>  
                                 )  

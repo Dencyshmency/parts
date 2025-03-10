@@ -20,7 +20,6 @@ export default function Front() {
             } else if (isIndex === 2) {  
               setColor('gray');  
             } 
-             console.log(isIndex)
         }, [isIndex])
 
     const changeColorItem = (item) => {
@@ -78,7 +77,7 @@ export default function Front() {
                                 </ul>
                                 <picture>
                                     <source media="(max-width: 768px)" srcSet="../images/f1m.svg" />
-                                    <img src="../images/f1.png" alt="logo" />
+                                    <img src="../images/f1.png" alt="Casino" />
                                 </picture>
                             </div>
                         </SwiperSlide>
@@ -92,21 +91,21 @@ export default function Front() {
                                 </ul>
                                 <picture>
                                     <source media="(max-width: 768px)" srcSet="../images/f3m.svg" />
-                                    <img src="../images/f2.png" alt="logo" />
+                                    <img src="../images/f2.png" alt="AI Adult" />
                                 </picture>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide onMouseEnter={() => changeColorItem('gray')}>
                             <div className="front-section-item third-front-item">
-                                <p>Casino</p>
+                                <p>Nutra</p>
                                 <ul>
-                                    <li>CPA - registration</li>
+                                    <li>CPL</li>
                                     <li>Location: Latin America</li>
                                     <li>4$ - CPM</li>
                                 </ul>
                                 <picture>
                                     <source media="(max-width: 768px)" srcSet="../images/f2m.svg" />
-                                    <img src="../images/f3.png" alt="logo" />
+                                    <img src="../images/f3.png" alt="Nutra" />
                                 </picture>
                             </div>
                         </SwiperSlide>

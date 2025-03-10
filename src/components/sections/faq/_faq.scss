@@ -51,6 +51,7 @@
                      svg {
                         transform: rotate(0);
                         transition: 0.3s ease;
+                        flex-shrink: 0;
                     }
 
                 }
@@ -59,9 +60,16 @@
                     font-family: var(--font-family);
                     font-weight: 400;
                     font-size: 16px;
-                    line-height: 0.7;
+                    line-height: 140%;
                     color: var(--text-grey);
                     padding-top: 16px;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding-left: 20px;
+                    }
                 }
             }
 
