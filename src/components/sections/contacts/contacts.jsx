@@ -104,7 +104,7 @@ const sendTelegramm = (item) => {
                                     setSend('submit-wrapper open-wrapper')
                                 }}  
                             >  
-                            {({ isSubmitting, errors, touched }) => (  
+                            {({ isSubmitting, errors, touched, isValid, dirty }) => (  
                                 <Form> 
                                     <div className='form-section'>
                                         <div>  
@@ -148,7 +148,7 @@ const sendTelegramm = (item) => {
                                         className={touched.message && errors.message ? 'error-input' : ''}
                                         />  
                                     </div>  
-                                    <button type="submit" disabled={isSubmitting}>  
+                                    <button type="submit" className={`${isValid && dirty ? 'active' : ''}`}  disabled={isSubmitting}>  
                                     Send  
                                     </button>  
                                 </Form>  
