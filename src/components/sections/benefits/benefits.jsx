@@ -6,13 +6,13 @@ const Benefits = () => {
         <section>
             <div className="container">
                 <div className="benefits-wrapper">
-                    <h3 className="section-title">Benefits</h3>
+                    <p className="section-title">Benefits</p>
                     <div className="benefits-items">
                         {benefitsData.map((item, index) => {
                             return (
                                 <div key={index} className='benefits-item'>
                                     <img src={item.img} alt={item.text} />
-                                    <p>{item.text}</p>
+                                    <h3>{item.text}</h3>
                                 </div>
                             )
                         })}

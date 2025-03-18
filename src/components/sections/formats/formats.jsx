@@ -6,7 +6,7 @@ const Formats = () => {
         <section>
             <div className="container">
                 <div className="formats-wrapper">
-                    <h3 className="section-title">Ad Formats</h3>
+                    <p className="section-title">Ad Formats</p>
                     <div className="formats-items">
                         {FormatsData.map((item, index) => {
                             const className = index === 0 || index === 1 ? 'formats-item large-formats-item' : 'formats-item'; 

@@ -8,7 +8,7 @@ export default function Products () {
         <section>
             <div className="container">
                 <div className="products-wrapper">
-                    <h3 className="section-title">Our products</h3>
+                    <p className="section-title">Our products</p>
                     <div className="products-items">
                         <div className="products-item products-item--casino">
                             <div className="products-item-text">
@@ -110,7 +110,7 @@ export default function Products () {
                         </div>
                         <div className="products-item products-item--registration">
                             <picture>
-                                <source media="(max-width: 768px)" srcset="../images/products/form8-bg-m.png" />
+                                <source media="(max-width: 768px)" srcSet="../images/products/form8-bg-m.png" />
                                 <img src="../images/products/form8-bg.png" alt="cards-img" />
                             </picture>
                             <h5>Only for new users</h5>

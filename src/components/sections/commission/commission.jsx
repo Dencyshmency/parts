@@ -7,7 +7,7 @@ const Commission = () => {
         <section>
         <div className="container">
             <div className="commission-wrapper">
-                <h3 className="section-title">Commission</h3>
+                <p className="section-title">Commission</p>
                 <p>Commissions depend on specific offers available on the platform. Below is an estimated income that can be earned on our platform.</p>
                
                     

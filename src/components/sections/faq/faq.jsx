@@ -21,9 +21,9 @@ const Faq = () => {
         <section>  
             <div className="container">  
                 <div className="faq-wrapper">  
-                    <h3 className="section-title">  
+                    <p className="section-title">  
                         Frequently asked questions  
-                    </h3>  
+                    </p>  
                     <div className="faq-items-wrapper">  
                         <div className='faq-items'>  
                             {Faqdata.map((item, index) => {  
@@ -31,13 +31,13 @@ const Faq = () => {
                                 return (  
                                     <div key={index} className={className} onClick={() => handleClick1(index)}>  
                                         <div className="faq-item-head">  
-                                            <p>{item.question}</p>  
+                                            <h4>{item.question}</h4>  
                                             <svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">  
                                                 <path d="M24 21L18 15L12 21" stroke="white" strokeLinecap="round" />  
                                             </svg>  
                                         </div>  
                                         <Collapse isOpened={openIndex1 === index}>  
-                                            <div className='faq-answer' dangerouslySetInnerHTML={{ __html: item.answer }}></div>  
+                                            <h5 className='faq-answer' dangerouslySetInnerHTML={{ __html: item.answer }}></h5>  
                                         </Collapse>  
                                     </div>  
                                 )  
@@ -49,13 +49,13 @@ const Faq = () => {
                                 return (  
                                     <div key={index} className={className} onClick={() => handleClick2(index)}>  
                                         <div className="faq-item-head">  
-                                            <p>{item.question}</p>  
+                                            <h4>{item.question}</h4>  
                                             <svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">  
                                                 <path d="M24 21L18 15L12 21" stroke="white" strokeLinecap="round" />  
                                             </svg>  
                                         </div>  
                                         <Collapse isOpened={openIndex2 === index}>  
-                                            <div className='faq-answer' dangerouslySetInnerHTML={{ __html: item.answer }}></div>  
+                                            <h5 className='faq-answer' dangerouslySetInnerHTML={{ __html: item.answer }}></h5>  
                                         </Collapse>  
                                     </div>  
                                 )  

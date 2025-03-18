@@ -1,13 +1,13 @@
-@import '/src/components/loyaut/header.scss';
-@import '/src/components/loyaut/footer.scss';
-@import '/src/components/sections/front/front.scss';
-@import '/src/components/sections/products/products.scss';
-@import '/src/components/sections/formats/formats.scss';
-@import '/src/components/sections/commission/commission.scss';
-@import '/src/components/sections/benefits/benefits.scss';
-@import '/src/components/sections/faq/faq.scss';
-@import '/src/components/sections/contacts/contacts.scss';
-@import '/src/components/states/traffic/traffic.scss';
+@use '/src/components/loyaut/header.scss';
+@use '/src/components/loyaut/footer.scss';
+@use '/src/components/sections/front/front.scss';
+@use '/src/components/sections/products/products.scss';
+@use '/src/components/sections/formats/formats.scss';
+@use '/src/components/sections/commission/commission.scss';
+@use '/src/components/sections/benefits/benefits.scss';
+@use '/src/components/sections/faq/faq.scss';
+@use '/src/components/sections/contacts/contacts.scss';
+@use '/src/components/states/traffic/traffic.scss';
 
 * {
   margin: 0;

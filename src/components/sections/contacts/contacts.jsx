@@ -78,7 +78,7 @@ const sendTelegramm = (item) => {
         <section id="form-section">
             <div className="container">
                 <div className="contacts-wrapper">
-                    <h3 className="section-title">Contacts</h3>
+                    <p className="section-title">Contacts</p>
                     <div className="contacts-content">
                         <div className="contacts-content-nav">
                             <p>Join us right now!</p>
@@ -162,8 +162,8 @@ const sendTelegramm = (item) => {
               <div className="submit-content">
                 <button className="close-submit-btn" onClick={closeModal}>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.6665 13.3333L13.3332 2.66666" stroke="#898989" stroke-width="1.33333" stroke-linecap="round" />
-                    <path d="M13.3335 13.3333L2.66683 2.66666" stroke="#898989" stroke-width="1.33333" stroke-linecap="round" />
+                    <path d="M2.6665 13.3333L13.3332 2.66666" stroke="#898989" strokeWidth="1.33333" strokeLinecap="round" />
+                    <path d="M13.3335 13.3333L2.66683 2.66666" stroke="#898989" strokeWidth="1.33333" strokeLinecap="round" />
                   </svg>
                 </button>
                 <p>Your application has been submitted!</p>
