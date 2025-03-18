@@ -69,7 +69,7 @@ export default function Front() {
                     >
                         <SwiperSlide onMouseEnter={() => changeColorItem('blue')} >
                             <div className="front-section-item first-front-item">
-                                <p>Casinos</p>
+                                <p>Casino</p>
                                 <ul>
                                     <li>CPA - registration</li>
                                     <li>Location: Latin America</li>
